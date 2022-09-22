@@ -3,6 +3,7 @@ import Search from './search';
 import Dropdown from './dropdown';
 import Paginas from './paginas';
 const Navbar = () => {
+    const dropdown=["MUSCULO", "RUTINA", "EJERCICIO",];
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -11,9 +12,9 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <Paginas />
-                            <Dropdown />
+                            <Dropdown lista= {dropdown}/>
                         </ul>
-                        <Search />
+                        <Search busqueda="buscar producto"/>
                     </div>
                 </div>
             </nav>
